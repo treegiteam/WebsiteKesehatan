@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+
+}
+
+body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    color: #174d87;
+    min-height: 2000px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .navbar-logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar .navbar-logo span {
+    color: #4c92de;
+
+}
+
+.navbar .navbar-nav a {
+    color: #174d87;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: black;
+
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid white;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5s);
+
+}
+
+navbar .navbar-extra a {
+    color: white;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: black;
+}
+
+#mmenu {
+    display: none;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('img/stetoskop1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+    position: relative;
+
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.4) 60%, transparent 100%);
+    z-index: 2;
+
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5rem;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    line-height: 1.2;
+}
+
+.hero .content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    align-items: baseline;
+
+}
+
+.sehat {
+    padding: 6rem 1.4rem 7%;
+}
+
+.sehat h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #4c92de;
+    margin-bottom: 3rem;
+}
+
+.sehat h2 span {
+    color: #174d87;
+}
+
+.sehat .row {
+    display: flex;
+}
+.prolog {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  color: #174d87;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.progress {
+    background-color: #4c92de;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    font-size: 1rem;
+    border-radius: 10px 0 0 10px;
+    transition: width 1s ease-in-out;
+    width: 0%;
+}
+
+.after-stats {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  color: #174d87;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.sehat {
+    padding: 6rem 1.4rem 7%;
+}
+
+#konsul {
+    scroll-margin-top: 100px;
+}
+
+.konsul h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #4c92de;
+    margin-bottom: 3rem;
+}
+
+.konsul h3 {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.map-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.map-wrapper iframe {
+    width: 300px;
+    height: 250px;
+    border: 0;
+    border-radius: 12px;
+}
+
+
+.konsul .row {
+    display: flex;
+}
+
+.form-prolog {
+  max-width: 700px;
+  margin: 2rem auto 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #174d87;
+  line-height: 1.6;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.about h2 {
+    color: #4c92de;
+    font-size: 2.6rem;
+    margin-top: 3rem;
+}
+
+.about h3 span {
+    color: #5589c0;
+}
+
+.about h3 {
+    margin-top: 3rem;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 220px;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4c92de;
+    margin-bottom: 15px;
+}
+
+.contact {
+    padding: 4rem 7%;
+    background-color: #f6fafd;
+    color: #174d87;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4c92de;
+}
+
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-card h3 {
+    font-size: 1.4rem;
+    color: #4c92de;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.contact-card a {
+    color: #174d87;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: #4c92de;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #4c92de;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #mmenu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #4c92de;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: white;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
